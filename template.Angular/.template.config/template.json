@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Vincent Simone",
+    "classifications": [
+        "Web",
+        "SPA"
+    ],
+    "identity": "template.Angular",
+    "name": "Angular Template",
+    "shortName": "vsAngular",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "template.Angular",
+    "preferNameDirectory": true
+}

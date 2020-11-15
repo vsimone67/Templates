@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vincent Simone",
+  "classifications": ["Web", "WebAPI"],
+  "identity": "template.Service",
+  "name": "Service Template",
+  "shortName": "vsservice",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "template.Service",
+  "preferNameDirectory": true,
+  "symbols": {
+    "dbcontext": {
+      "type": "parameter",
+      "defaultValue": "MyDbContext",
+      "replaces": "dbcontext"
+    },
+    "connectionstring": {
+      "type": "parameter",
+      "defaultValue": "LocalConnection",
+      "replaces": "connectionName"
+    },
+    "appName": {
+      "type": "parameter",
+      "defaultValue": "MyApp",
+      "replaces": "appName"
+    }
+  }
+}

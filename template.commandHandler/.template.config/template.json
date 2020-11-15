@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vincent Simone",
+  "classifications": ["Common", "Code"],
+  "identity": "vscommand",
+  "name": "Command Handler Template",
+  "shortName": "vscommand",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "MyCommand",
+  "symbols": {
+    "namespace": {
+      "type": "parameter",
+      "defaultValue": "MyNamespace",
+      "replaces": "MyNamespace"
+    }
+  }
+}

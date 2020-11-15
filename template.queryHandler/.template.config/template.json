@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vincent Simone",
+  "classifications": ["Common", "Code"],
+  "identity": "query",
+  "name": "Query Handler Template",
+  "shortName": "vsquery",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "My",
+  "symbols": {
+    "namespace": {
+      "type": "parameter",
+      "defaultValue": "MyNamespace",
+      "replaces": "MyNamespace"
+    }
+  }
+}

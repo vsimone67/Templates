@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vincent Simone",
+  "classifications": ["Common", "Code"],
+  "identity": "controller",
+  "name": "Controller Template",
+  "shortName": "vscontroller",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "MyController",
+  "symbols": {
+    "namespace": {
+      "type": "parameter",
+      "defaultValue": "MyNamespace",
+      "replaces": "MyNamespace"
+    }
+  }
+}
