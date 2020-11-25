@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Steeltoe.Management.Endpoint;
 using Steeltoe.Management.Endpoint.Health;
 using Steeltoe.Management.Endpoint.Metrics;
+using System.Threading.Tasks;
 
 namespace template.Service.Extensions
 {
@@ -48,6 +49,17 @@ namespace template.Service.Extensions
                     Predicate = _ => true,
                     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
                 });
+
+                endpoints.MapGet("/config", context =>
+                {
+                    if (Configuration is IConfigurationRoot root)
+                    {
+                        return context.Response.WriteAsync(root.GetDebugView());
+                    }
+                    return Task.CompletedTask;
+                });
+
+
             });
             return builder;
         }
