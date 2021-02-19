@@ -41,7 +41,7 @@ namespace template.Service
 
             app.UseRouting();
             app.UserCorsPolicy();
-            app.UseMvcExtensions();
+            app.UseMvcExtensions(Configuration);
             //app.UseHttpsRedirection();
         }
     }

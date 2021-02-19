@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Fac.Service.Application.Queries;
 
 namespace MyNamespace
 {
@@ -20,14 +19,14 @@ namespace MyNamespace
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        [HttpGet]
-        [Route("MyRoute")]
-        public async Task<ActionResult> MyRoute()
-        {
-            _logger.LogDebug("Begin");
-            var data = await _mediator.Send(new MyQuery());
-            _logger.LogDebug("End");
-            return Ok(data);
-        }
+        // [HttpGet]
+        // [Route("MyRoute")]
+        // public async Task<ActionResult> MyRoute()
+        // {
+        //     _logger.LogDebug("Begin");
+        //     var data = await _mediator.Send(new MyQuery());
+        //     _logger.LogDebug("End");
+        //     return Ok(data);
+        // }
     }
 }

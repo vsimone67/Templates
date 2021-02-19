@@ -37,7 +37,7 @@ namespace template.Service.Extensions
             return services;
         }
 
-        public static IApplicationBuilder UseMvcExtensions(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseMvcExtensions(this IApplicationBuilder builder, IConfiguration Configuration)
         {
             builder.UseEndpoints(endpoints =>
             {
