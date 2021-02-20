@@ -1,7 +1,7 @@
-rm commands/*
-rm controllers/*
-rm dto/*
-rm queries/*
+rm application/commands/*
+rm application/controllers/*
+rm application/dto/*
+rm application/queries/*
 rm domain/entities/*
 #rm infrastructure/*
 rm persistence/context/*
