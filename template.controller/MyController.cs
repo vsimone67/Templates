@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace MyNamespace
+namespace MyNamespace.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

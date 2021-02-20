@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using template.Service.Authentication;
+using template.Service.Application.Models;
 
 namespace template.Service.Extensions
 {
@@ -13,6 +14,7 @@ namespace template.Service.Extensions
         {
 
             services.Configure<AuthorizationSettings>(configuration.GetSection("Authorization"));
+            services.Configure<PubSubSettings>(configuration.GetSection("PubSub"));
             return services;
         }
         public static IHostBuilder AddConfiguration(this IHostBuilder builder, string basePath = "")

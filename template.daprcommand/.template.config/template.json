@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vincent Simone",
+  "classifications": ["Common", "Code"],
+  "identity": "vscommand",
+  "name": "Dapr Command Handler Template",
+  "shortName": "daprcommand",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "MyCommand",
+  "symbols": {
+    "namespace": {
+      "type": "parameter",
+      "defaultValue": "MyNamespace",
+      "replaces": "MyNamespace"
+    },
+    "option": {
+      "type": "parameter",
+      "defaultValue": "MyOptions",
+      "replaces": "MyOptions"
+    },    
+    "commandproperty": {
+      "type": "parameter",
+      "defaultValue": "MyProperty",
+      "replaces": "MyProperty"
+    },
+    "commandname": {
+      "type": "parameter",
+      "defaultValue": "Payload",
+      "replaces": "MyName"
+    },    
+    "pubsubname": {
+      "type": "parameter",
+      "defaultValue": "PUBSUB_NAME_GOES_HERE",
+      "replaces": "MyPubSub"
+    },    
+    "topicname": {
+      "type": "parameter",
+      "defaultValue": "TOPIC_GOES_HERE",
+      "replaces": "MyTopic"
+    }
+  }
+}

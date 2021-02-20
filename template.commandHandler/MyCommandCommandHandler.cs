@@ -3,9 +3,7 @@ using System.Threading;
 using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
-using MassTransit;
 
 namespace MyNamespace.Application.Commands
 {
@@ -13,21 +11,16 @@ namespace MyNamespace.Application.Commands
     {
         private readonly ILogger _logger;
         private readonly IMapper _mapper;
-        private readonly ISendEndpointProvider _serviceBus;
 
-
-        public MyCommandCommandHandler(IServiceProvider serviceProvider)
+        public MyCommandCommandHandler(ILogger logger, IMapper mapper)
         {
-            _logger = serviceProvider.GetService<ILogger<MyCommandCommandHandler>>();
-            _mapper = serviceProvider.GetService<IMapper>();
-            _serviceBus = serviceProvider.GetService<ISendEndpointProvider>();
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         public async Task<Unit> Handle(MyCommandCommand request, CancellationToken cancellationToken)
-        {
-            var mibToSubmit = new MibSubmitted() { FirstName = "MyFirstName", LastName = "MyLastName", Dob = new DateTime(2000, 01, 15) };
-            await _serviceBus.Send(mibToSubmit);
-            _logger.LogDebug("Mib Sent");
+        {            
+            _logger.LogDebug("Handler Done...");
             return new Unit();
         }
 

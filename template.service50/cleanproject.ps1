@@ -5,5 +5,5 @@ rm application/queries/*
 rm domain/entities/*
 #rm infrastructure/*
 rm persistence/context/*
-rm dbservice/*
+rm persistence/dbservice/*
 rm readme.txt
