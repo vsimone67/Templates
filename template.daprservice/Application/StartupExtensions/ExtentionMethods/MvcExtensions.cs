@@ -60,6 +60,8 @@ namespace template.Service.Extensions
                     return Task.CompletedTask;
                 });
 
+                endpoints.MapDynamicLogging("/setloglevel/{level:int}");
+
             });
             return builder;
         }

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Serilog;
 using template.Service.Extensions;
 
 namespace template.Service
@@ -23,7 +22,7 @@ namespace template.Service
             services.AddMvcExtensions(Configuration);
             services.AddCommandQueryHandlers();
             services.AddMappingProfiles();
-            services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
+            //services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
             services.ConfigureDiEnvironment(Configuration);
             services.MapConfigToClass(Configuration);
             services.AddOpenApi();

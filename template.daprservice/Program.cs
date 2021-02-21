@@ -4,11 +4,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using template.Service.Extensions;
+using Serilog.Core;
 
 namespace template.Service
 {
     public class Program
     {
+        public static LoggingLevelSwitch LevelSwitch = new LoggingLevelSwitch();
+
         public static void Main(string[] args)
         {
             try
@@ -21,6 +24,7 @@ namespace template.Service
 
                 Log.Logger = new LoggerConfiguration()
                     .ReadFrom.Configuration(configuration)
+                    .MinimumLevel.ControlledBy(LevelSwitch)
                     .CreateLogger();
 
                 CreateHostBuilder(args).Build().Run();

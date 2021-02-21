@@ -9,10 +9,10 @@ namespace MyNamespace.Application.Commands
 {
     public class MyCommandCommandHandler : IRequestHandler<MyCommandCommand>
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<MyCommandCommandHandler> _logger;
         private readonly IMapper _mapper;
 
-        public MyCommandCommandHandler(ILogger logger, IMapper mapper)
+        public MyCommandCommandHandler(ILogger<MyCommandCommandHandler> logger, IMapper mapper)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
